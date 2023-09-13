@@ -1,3 +1,37 @@
+.container {
+  position: relative;
+  width: 100%; /* Set the width of the container */
+  height: 300px; /* Set the height of the container */
+}
+
+.center-left {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  max-width: 7%;
+  max-height: 29%;
+  margin-left: 91px;
+  margin-top: 107px;
+}
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+/* Style for the blue boxes */
+/* .box {
+  width: 150px; 
+  height: 100px; 
+  background-color: #112949; 
+  color: white; 
+  line-height: 100px; 
+  font-size: 18px; 
+  font-weight: bold; 
+  margin: 10px;
+  float: left; 
+} */
 
 /* Default styles for all screen sizes */
 body {

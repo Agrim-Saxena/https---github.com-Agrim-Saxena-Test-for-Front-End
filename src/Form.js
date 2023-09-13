@@ -3,9 +3,18 @@ import React, { useState } from 'react';
 function Form() {
   const [email, setEmail] = useState('');
   const [response, setResponse] = useState('');
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+     // After successful submission, set isSubmitted to true and trigger the refresh.
+     setIsSubmitted(true);
+
+     // Reload the page after 2 seconds (2000 milliseconds).
+     setTimeout(() => {
+       window.location.reload();
+     }, 3000);
 
     try {
       const apiUrl = 'http://3.228.97.110:9000/api';
@@ -30,12 +39,13 @@ function Form() {
 
   return (
     <div>
-      <h1>API Integration Form</h1>
+      <h1>Suite Of Business Support Services</h1>
       <form onSubmit={handleSubmit}>
         <label>
           Email:
           <input
             type="email"
+            placeholder="Enter your email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
